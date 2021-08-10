@@ -8,7 +8,7 @@ const content = document.getElementById('content');
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'/'+ d.getDate()+'/'+ d.getFullYear();
+let newDate = d.getMonth()+1+'/'+ d.getDate()+'/'+ d.getFullYear();
 // create function to handle click
 let handleClick=()=> {
     const zipcode = document.getElementById('zip').value;
@@ -51,8 +51,8 @@ async function dataFlow(data){
 
 // creata a function to show up data 
 function showData(result){
-    date.innerText = `Date is : ${result.date}`
-    temp.innerText = `Temprature is : ${result.temp} C`
-    content.innerText = (result.feelings!='')?`Your feelings is :${result.feelings}`:'';
+    date.innerHTML = `Date is : ${result.date}`
+    temp.innerHTML = `Temprature is : ${result.temp} C`
+    content.innerHTML = (result.feelings!='')?`Your feelings is :${result.feelings}`:'';
 }
 
